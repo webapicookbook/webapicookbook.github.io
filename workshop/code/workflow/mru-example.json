@@ -1,0 +1,36 @@
+{
+  "collection" : {
+    "links": [
+      {
+        "name": "self",
+        "rel" : "home self", 
+        "href": "https://api.example.org/"
+      },
+      {"$comment" : "link that points to the MRU list"},
+      {
+        "name": "mru",
+        "rel": "collection",
+        "href": "https://api.example/org/mru"
+      },
+      {"$comment" : "some MRU links in the response"},
+      {
+        "name": "list",
+        "rel": "mru collection", 
+        "href": "https://api.example.org/list"
+      },
+      {
+        "name": "pending",
+        "rel": "mru collection", 
+        "href": "https://api.example.org/list?status=pending"
+      },
+      {
+        "name": "home",
+        "rel": "mru home", 
+        "href": "https://api.example.org/"
+      }
+    ], 
+    "items": [ ... ],
+    "queries": [ ... ],
+    "template": { ... }
+  }
+}

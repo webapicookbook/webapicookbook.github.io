@@ -1,0 +1,35 @@
+{
+  "$schema":"https://alps-io.github.io/schemas/alps.json",
+  "alps" : {
+    "version":"1.0",
+    "title":"ToDo List",
+    "doc" : {"value":"ALPS profile for ToDo services (see [ToDo Story](to-do-story.md))"},
+    
+    "descriptor":[
+      {"id":"id", "type":"semantic", "tag":"ontology"},
+      {"id":"title", "type":"semantic", "tag":"ontology"},
+
+      {"id":"home", "type":"semantic", "tag":"taxonomy",
+        "descriptor": [{"href":"#goList"}]
+      },
+
+      {"id":"list", "type":"semantic", "tag":"taxonomy", 
+        "descriptor":[
+          {"href":"#id"},
+          {"href":"#title"},
+          {"href":"#goHome"}, 
+          {"href":"#goList"},
+          {"href":"#doAdd"},
+          {"href":"#doRemove"}
+        ]
+      },
+      
+      {"id":"goHome", "type":"safe", "rt":"#home", "tag":"choreography"},
+      {"id":"goList", "type":"safe", "rt":"#list", "tag":"choreography"},
+      {"id":"doAdd", "type":"unsafe", "rt":"#list", "tag":"choreography",
+        "descriptor": [{"href":"#id"},{"href":"#title"}]},
+      {"id":"doRemove", "type":"idempotent", "rt":"#list", "tag":"choreography",
+        "descriptor": [{"href":"#id"}]}
+    ]
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "collection": {
+    "version": "1.0",
+    "href": "http://localhost:8181",
+    "title": "BigCo Activity Records",
+    "links": [
+      {
+        "name": "home", "href": "http://localhost:8181/",
+        "rel": "home", "prompt": "Home"
+      },
+      {
+        "name": "list", "href": "http://localhost:8181/list/",
+        "rel": "list", "prompt": "List"
+      }
+    ],
+    "items": [
+      {
+        "id": "22s3k36pkn4",
+        "rel": "person",
+        "href": "http://localhost:8181/22s3k36pkn4",
+        "data": [
+          {"name": "id", "value": "22s3k36pkn4", "prompt": "id"},
+          {"name": "givenName", "value": "Mork", "prompt": "givenName"},
+          {"name": "familyName", "value": "Mockery", "prompt": "familyName"}
+        ],
+        "links": [
+          {
+            "name": "read", "href": "http://localhost:8181/22s3k36pkn4",
+            "rel": "read", "prompt": "Read"
+          }
+        ]
+      }
+    ],
+    "queries": [
+      {
+        "name": "filter",
+        "href": "http://localhost:8181/filter/",
+        "rel": "filter",
+        "prompt": "Search",
+        "data": [
+          {"name": "givenName", "value": ""},
+          {"name": "familyName", "value": ""}
+        ]
+      }
+    ],
+    "template": [
+      {"name": "id", "value": "", "prompt": "id"},
+      {"name": "givenName", "value": "", "prompt": "givenName"},
+      {"name": "familyName", "value": "", "prompt": "familyName"}
+    ]
+  }
+}

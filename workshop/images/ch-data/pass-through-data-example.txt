@@ -1,0 +1,29 @@
+title Pass-Through Data Example (for Updates)
+
+opt Read Data
+   AddressAPI uses data from AddressData to request related PersonData
+  apiClient->AddressAPI: Request AddressData
+  AddressAPI->PersonAPI: Request PersonData
+  PersonAPI-->AddressAPI: Return PersonData
+   AddressAPI retains full personData and sends only AddressData to the apiClient.
+
+  AddressAPI-->apiClient: Return AddressData
+end
+
+opt Update Data
+   apiClient sends updated AddressData to AddressAPI
+  apiClient->AddressAPI: Send updated AddressData
+   AddressAPI loads updated AddressData into retained PersonData then sends update request to PersonAPI
+  AddressAPI->PersonAPI: Send updated PersonData
+
+  alt When update is successful
+    PersonAPI-->AddressAPI: return 2xx
+     When all is successful, return 2xx (204, 200)
+    AddressAPI-->apiClient: Return 2xx
+  else When update fails
+    PersonAPI-->AddressAPI: Return 4xx/5xx
+     When update fails at either AddressAPI or PersonAPI, return 4xx/5xx
+    AddressAPI-->apiClient: Return 4xx/5xx
+  end
+end
+

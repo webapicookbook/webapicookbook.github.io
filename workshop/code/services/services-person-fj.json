@@ -1,0 +1,54 @@
+{
+  "person": {
+    "links": [
+      {
+        "id": "home",
+        "name": "home",
+        "href": "http://localhost:8181/",
+        "rel": "home",
+        "title": "Home",
+        "method": "GET",
+        "properties": []
+      },
+      {
+        "id": "list",
+        "name": "list",
+        "href": "http://localhost:8181/list/",
+        "rel": "list collection",
+        "title": "List",
+        "method": "GET",
+        "properties": []
+      },
+      {
+        "id": "filter",
+        "name": "filter",
+        "href": "http://localhost:8181/filter/",
+        "rel": "filter collection",
+        "title": "Search",
+        "method": "GET",
+        "properties": [
+          {"name": "givenName", "value": ""},
+          {"name": "familyName", "value": ""}
+        ]
+      }
+    ],
+    "items": [
+      {
+        "links": [
+          {
+            "id": "read_22s3k36pkn4",
+            "name": "read",
+            "href": "http://localhost:8181/22s3k36pkn4",
+            "rel": "read item",
+            "title": "Read",
+            "method": "GET",
+            "properties": []
+          }
+        ],
+        "id": "22s3k36pkn4",
+        "givenName": "Mork",
+        "familyName": "Mockery"
+      }
+    ]
+  }
+}

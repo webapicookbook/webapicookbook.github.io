@@ -1,0 +1,27 @@
+<body>
+    <h1>Tasks Hypermedia</h1>
+
+    <!-- response data goes here -->
+    <ul id="data">
+      <li data="id" dvalue="0" id="complete" 
+        href="/tasks/complete/" method="post">this is some item</li>
+      <li data="id" dvalue="1" id="complete" 
+        href="/tasks/complete/" method="post">this is another item</li>
+      <li data="id" dvalue="2" id="complete" 
+        href="/tasks/complete/" method="post">this is one more item</li>
+      <li data="id" dvalue="3" id="complete" 
+        href="/tasks/complete/" method="post">this is possibly an item</li>
+     </ul>
+
+    <!-- actions go here -->
+    <div id="actions">
+      <input type="button" class="button" id="add" 
+        method="post" href="/tasks/" value="add" data="text">
+      <input type="button" class="button" id="list" 
+        method="get" href="/tasks/" value="list">
+      <input type="button" class="button" id="search" 
+        method="get" href="/tasks/search" value="search" data="text">
+   </div>
+
+  <script src="tasks.js" type="text/javascript"></script>
+</body>

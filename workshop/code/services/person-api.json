@@ -1,0 +1,50 @@
+{ 
+  "$schema": "https://alps-io.github.io/schemas/alps.json",
+  "alps":
+  {
+    "version": "1.0",
+    "title": "Person Service API",
+    
+    "descriptor" : [
+     ... 
+     {"id": "home", "type": "semantic",
+        "title":"Home (starting point) of the person service",
+        "tag":"taxonomy", 
+        "descriptor": [
+         {"href": "#goHome"},
+         {"href": "#goList"}
+        ],
+        "doc" : {"value" : "Person API starting point"}
+     },
+     {"id": "collection", "type": "semantic",
+        "title":"List of person resources",
+        "tag":"taxonomy", 
+        "descriptor": [
+         {"href": "#person"},
+         {"href": "#goHome"},
+         {"href": "#goList"},
+         {"href": "#goFilter"},
+         {"href": "#goItem"},
+         {"href": "#doCreate"}
+        ],
+        "doc" : {"value" : "List of person resources"}
+     },
+     {"id": "item", "type": "semantic",
+        "title":"Single person resource",
+        "tag":"taxonomy", 
+        "descriptor": [
+          {"href": "#person"},
+          {"href": "#goHome"},
+          {"href": "#goList"},
+          {"href": "#goFilter"},
+          {"href": "#goItem"},
+          {"href": "#doUpdate"},
+          {"href": "#doStatus"},
+          {"href": "#doRemove"}
+        ],
+        "doc" : {"value" : "A single person resource"}
+      },
+      ...
+    ]
+  }
+}

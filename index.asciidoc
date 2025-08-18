@@ -1,0 +1,30 @@
+= RESTful Web API Patterns & Practices Cookbook
+
+*_Connecting and Orchestrating Microservices and Distributed Data_*
+
+The goal of this book is to enable software designers, architects, developers, and maintainers to build service interfaces (APIs) that take advantage of the strengths of the web while lowering the costs and risks of creating reliable high-level services that hold dependencies on other APIs and services reachable only over the network.
+
+== Back Cover
+++++
+<p><img src="cover-02.png" align="right" width="300" margin=".3em"/>Many organizations today orchestrate and maintain apps that rely on other people’s services. Software designers, developers, and architects in those companies often work to coordinate and maintain apps based on existing service APIs, including third-party services that run outside their ecosystem. This cookbook provides proven recipes to help you get those many disparate parts to work together in your network.</p> 
+++++
+
+Author Mike Amundsen provides step-by-step solutions for finding, connecting, and maintaining applications designed
+and built by people outside the organization. Whether you’re working on human-centric mobile apps or creating high-powered machine-to-machine solutions, this guide shows you the rules, routines, commands, and protocols—the glue—that integrate individual APIs so they can function together in a safe, scalable, and reliable way.
+
+ * Design and build individual service interfaces that can successfully interact on the open web
+ * Increase interoperability by designing APIs that share a common understanding
+ * Build client applications that can adapt to evolving services without breaking
+ * Create resilient and reliable APIs that support peer-to-peer interactions on the web
+ * Use web-based API registries to support runtime “find and bind” operations that manage external dependencies in real time
+ * Implement stable workflows to accomplish complex, multiservice tasks consistently
+ 
+== Special Links
+
+ * Purchase the book at https://www.amazon.com/Restful-Patterns-Practices-Cookbook-Orchestrating/dp/1098106741/ref=sr_1_4?qid=1662167140[Amazon]  
+ * Read the book at https://learning.oreilly.com/library/view/restful-web-api/9781098106737/[O'Reilly Learning Platform]
+ * Subscribe to the https://twitter.com/webapicookbook[@WebAPICookbook] Twitter stream
+ * Check out the https://github.com/webapicookbook[WebAPI Cookbook] github repositories
+ * Review the https://webapicookbook.github.io/alps-documents/[ALPS documents] and diagrams for the book
+ 
+image::cover-02.png[width=300]

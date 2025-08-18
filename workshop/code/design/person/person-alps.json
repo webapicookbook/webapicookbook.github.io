@@ -1,0 +1,67 @@
+{ "$schema": "https://alps-io.github.io/schemas/alps.json",  
+  "alps" : {  
+  "title": "Person Semantic Profile Document",  
+  "doc": {"value": 
+    "Simple SPD example for http://webapicookbook.com[Web API Cookbook]."},  
+  "descriptor": [    
+    {"id": "href", "def": "https://schema.org/url", 
+     "tag": "ontology"},    
+    {"id": "identifier", "def": "https://schema.org/identifier",
+     "tag": "ontology"},    
+    {"id": "givenName", "def": "https://schema.org/givenName",
+     "tag": "ontology"},    
+    {"id": "familyName", "def": "https://schema.org/familyName",
+     "tag": "ontology"},    
+    {"id": "telephone", "def": "https://schema.org/telephone",
+     "tag": "ontology"},
+    
+    {"id": "Person", "tag": "taxonomy",
+      "descriptor": [
+        {"href": "#href"},
+        {"href": "#identifier"},
+        {"href": "#givenName"},
+        {"href": "#familyName"},
+        {"href": "#telephone"}
+      ]
+    },
+    {"id": "Home", "tag": "taxonomy",
+      "descriptor": [
+        {"href": "#goList"},
+        {"href": "#goHome"}
+      ]
+    },
+    
+    {"id": "List", "tag": "taxonomy",
+      "descriptor": [
+        {"href": "#Person"},
+        {"href": "#goFilter"},
+        {"href": "#goItem"},
+        {"href": "#doCreate"},
+        {"href": "#goList"},
+        {"href": "#goHome"}
+      ]
+    },
+    {"id": "Item", "tag": "taxonomy",
+      "descriptor": [
+        {"href": "#Person"},
+        {"href": "#goFilter"},
+        {"href": "#goItem"},
+        {"href": "#doUpdate"},
+        {"href": "#doRemove"},
+        {"href": "#goList"},
+        {"href": "#goHome"}        
+      ]
+    },
+    {"id": "goHome", "type": "safe", "tag": "choreography", "rt": "#Home"},
+    {"id": "goList", "type": "safe", "tag": "choreography", "rt": "#List"},
+    {"id": "goFilter", "type": "safe", "tag": "choreography", "rt": "#List"},
+    {"id": "goItem", "type": "safe", "tag": "choreography", "rt": "#Item"},
+    {"id": "doCreate", "type": "unsafe", "tag": "choreography", "rt": "#Item"},
+    {"id": "doUpdate", "type": "idempotent", "tag": "choreography", 
+      "rt": "#Item"},
+    {"id": "doRemove", "type": "idempotent", "tag": "choreography", 
+      "rt": "#Item"}
+  ]
+  }
+}
+

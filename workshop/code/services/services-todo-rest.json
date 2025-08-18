@@ -1,0 +1,40 @@
+{
+  "links": [
+    {"link": {"rel": "add", "href": "/tasks/", "method": "post",
+        "data": [{"name": "text"}]
+      }
+    },
+    {"link": {"rel": "list", "href": "/tasks/", "method": "get"}
+    },
+    {"link": {"rel": "search", "href": "/tasks/search", "method": "get",
+        "data": [{"name": "text"}]
+      }
+    }
+  ],
+  "collection": [
+    {"item": {"id": 0, "text": "this is some item",
+        "link": {"rel":"complete","href":"/tasks/complete/","method": "post",
+          "data": [{"name": "id"}]
+        }
+      }
+    },
+    {"item": {"id": 1, "text": "this is another item", 
+        "link": {"rel": "complete", "href": "/tasks/complete/","method": "post",
+          "data": [{"name": "id"}]
+        }
+      }
+    },
+    {"item": {"id": 2,"text": "this is one more item",
+        "link": {"rel": "complete","href": "/tasks/complete/","method": "post",
+          "data": [{"name": "id"}]
+        }
+      }
+    },
+    {"item": {"id": 3,"text": "this is possibly an item",
+        "link": {"rel": "complete","href": "/tasks/complete/","method": "post",
+          "data": [{"name": "id"}]
+        }
+      }
+    }
+  ]
+}

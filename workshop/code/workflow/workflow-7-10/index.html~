@@ -1,0 +1,76 @@
+<html>
+<head>
+  <title>Onboarding Mick Mickelsen</title>
+  <link rel="stylesheet" type="text/css" href="tabs.css">
+</head>  
+<body>
+
+<h1>Onboarding Mick Mickelsen</h1>
+
+<!-- Tab links -->
+<div id="wip-actions" class="tab">
+  <button name="updateWIPemployee" class="tablinks" 
+    onclick="openCity(event, 'updateWIPemployee')">Employee Data</button>
+  <button name="updateWIPsupervisor" class="tablinks" 
+    onclick="openCity(event, 'updateWIPassignment')">Assignment Data</button>
+  <button name="cancelWIP" class="tablinks" 
+    onclick="openCity(event, 'cancelWIP')">Cancel</button>
+  <button name="submitWIP" class="tablinks" 
+    onclick="openCity(event, 'submitWIP')">Submit</button>
+</div>
+
+<!-- Tab content -->
+<div id="updateWIPemployee" class="tabcontent">
+  <h3>Employee Data</h3>
+  <p>Enter employee data.</p>
+  <form name="updateWIP">
+    <label>Given Name ...: <input name="givenName" value="Mick"/></label>
+    <label>Family Name ..: <input name="familyName" value="Mickelsen"/></label>
+    <label>Email ........: <input name="eamil" value="mick@exmple.com"/></label>
+    <label>SMS/Phone ....: <input name="phone" value="123-456-7890"/></label>
+    <input type="submit" value="Save" name="updateWIP" />
+  </form>  
+</div>
+
+<div id="updateWIPassignment" class="tabcontent">
+  <h3>Assignment Data</h3>
+  <p>Enter assignment data.</p>
+  <form name="updateWIP">
+    <label>District ...: <input name="division" value="9"/></label>
+    <label>Building ...: <input name="building" value="51"/></label>
+    <label>Team .......: <input name="team" value="MNU"/></label>
+    <label>Leader .....: <input name="leader" value="Wikus VanDeMerwe"/></label>
+    <label>Desk .......: <input name="desk" value="109.17"/></label>
+    <input type="submit" value="Save" name="updateWIP" />
+  </form>  
+</div>
+
+<div id="cancelWIP" class="tabcontent">
+  <h3>Cancel</h3>
+  <p>Cancel this work-in-progress document</p>
+  <form name="cancelWIP">
+    <select name="status">
+      <option value="no">No</option>
+      <option value="yes">Yes</option>
+    </select>
+    <input type="submit" name="submitWIP" />
+  </form>
+</div>
+
+<div id="submitWIP" class="tabcontent">
+  <h3>Submit</h3>
+  <p>Submit this work-in-progress document for processing.</p>
+  <form name="submitWIP">
+    <select name="status">
+      <option value="yes">Yes</option>
+      <option value="no">No</option>
+    </select>
+    <input type="submit" name="submitWIP" />
+  </form>
+</div>
+
+<body>
+
+<script src="tabs.js"></script>
+
+</html>

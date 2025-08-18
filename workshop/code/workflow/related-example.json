@@ -1,0 +1,25 @@
+{
+  "collection" : {
+    "links": [
+      {
+        "name": "self",
+        "rel" : "home self", 
+        "href": "https://api.example.org/"
+      },
+      {"$comment" : "link that points to the list of related actions"},
+      {
+        "name": "related",
+        "rel": "collection",
+        "href": "https://api.example/org/related"
+      },
+      {
+        "name": "list",
+        "rel": "collection",
+        "href": "https://api.example.org/list"
+      }
+    ], 
+    "items": [ ... ],
+    "queries": [ ... ],
+    "template": { ... }
+  }
+}

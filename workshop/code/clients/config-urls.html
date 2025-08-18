@@ -1,0 +1,30 @@
+<html>
+  <head>
+    <script type="text/javascript" 
+      src="client.example.org/js/service-urls-config.js"></script>
+    <script type="text/javascript">
+      ...
+      // using named URL variables
+      const http = new XMLHttpRequest();
+
+      // Send a request
+      http.open("GET", serviceURLs.list);
+      http.send(); 
+
+      // handle responses
+      http.onload = function() {
+        switch (http.responseURL) {
+          case serviceURLs.home:
+          ...
+          break;
+          ...
+        }
+      }
+      ...
+    </script>
+  </head>
+  <body>
+   ...
+  </body>
+</html>  
+

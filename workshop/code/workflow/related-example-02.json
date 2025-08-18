@@ -1,0 +1,40 @@
+{
+  "collection" : {
+    "links": [
+      {
+        "name": "self",
+        "rel" : "related", 
+        "href": "https://api.example.org/"
+      },
+      {"$comment" : "list of related available actions"},
+      {
+        "name": "list",
+        "rel": "collection", 
+        "href": "https://api.example.org/list"
+      },
+      {
+        "name": "filter",
+        "rel": "collection", 
+        "href": "https://api.example.org/filter"
+      },
+      {
+        "name": "create",
+        "rel": "collection", 
+        "href": "https://api.example.org/create-form"
+      },
+      {
+        "name": "needs-approval",
+        "rel": "collection", 
+        "href": "https://api.example.org/list?status=needs-approval"
+      },
+      {
+        "name": "home",
+        "rel": "home", 
+        "href": "https://api.example.org/"
+      }
+    ], 
+    "items": [ ... ],
+    "queries": [ ... ],
+    "template": { ... }
+  }
+}

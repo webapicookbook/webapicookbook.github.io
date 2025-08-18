@@ -1,0 +1,25 @@
+<html>
+  <head>
+    <title>Create Person</title>
+    <link rel="profile" href="http://api.example.org/profiles/person" />
+    <style>
+      input {display:block;}
+    </style>
+  </head>  
+  <body>
+    <h1>Create Person</h1>
+    <form name="doCreate" action="http://api.example.org/person/" 
+      method="post" enctype="application/x-www-form-urlencoded">
+      <fieldset>
+        <hidden name="identifier" value="q1w2e3r4" />
+        <input name="givenName" placeholder="givenName" required/>
+        <input name="familyName" placeholder="familyName" required/>
+        <input name="telephone" placeholder="telephone" pattern="[0-9]{10}"/>
+        <input type="submit" />
+        <input type="reset" />
+        <input type="button" value="Cancel" />
+      </fieldset>
+    </form>
+  </body>
+</html>
+

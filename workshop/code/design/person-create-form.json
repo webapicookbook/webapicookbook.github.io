@@ -1,0 +1,20 @@
+{ "collection" :
+  {
+    "version" : "1.0",
+    "href" : "http://api.example.org/person/",
+ 
+    "links": [
+      {"rel": "self", "href": "http://api.xample.org/person/doCreate"},
+      {"rel": "reset", "href":"http://api.example.org/person/doCreate?reset"},
+      {"rel": "cancel", "href":"http://api.example.org./person"}
+    ],   
+    "template" : {
+      "data" : [
+        {"name" : "identifer", "value": "q1w2e3r4"},
+        {"name" : "givenName", "value" : "", "required":true},
+        {"name" : "familyName", "value" : "", "required":true},
+        {"name" : "telephone", "value" : "", "regex":"[0-9]{10}"}
+      ]
+    }
+  } 
+}

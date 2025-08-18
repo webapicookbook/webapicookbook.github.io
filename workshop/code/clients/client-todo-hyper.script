@@ -1,0 +1,14 @@
+# data to work with
+STACK PUSH {"id":"zaxscdvf","body":"testing"}
+
+# vocabulary and format supported 
+CONFIG SET {"profile":"http://api.examples.org/profiles/todo-alps.json"}
+CONFIG SET {"format":"application/vnd.mash+json"}
+
+# write to service
+REQUEST WITH-URL http://api.example.org/todo/list WITH-PROFILE WITH-FORMAT
+REQUEST WITH-FORM doAdd WITH-STACK
+REQUEST WITH-LINK goList
+REQUEST WITH-FORM doRemove WITH-STACK
+EXIT
+
